@@ -4,11 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".EmailIntentActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="This is an Email Activity"/>
+        android:paddingVertical="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-black"
+        android:textSize="20sp"
+        android:text="Email Sender"
+        android:background="@color/black"/>
+
+    <EditText
+        android:id="@+id/input_email_to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="To"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/input_email_cc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="CC"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/input_email_bcc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="BCC"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/input_email_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Subject"
+        android:inputType="textEmailSubject"/>
+
+    <EditText
+        android:id="@+id/input_email_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Body" />
+
+    <Button
+        android:id="@+id/button_call_email_intent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send" />
 
 </LinearLayout>
