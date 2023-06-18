@@ -25,6 +25,13 @@ public class EmailIntentActivity extends AppCompatActivity {
                 composeEmail();
             }
         });
+        Log.d("Email onCreate", "onCreate");
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.d("Email onSaveInstanceState", "onSaveInstanceState");
     }
 
     private String[] splitAddress(String addressesText) {
