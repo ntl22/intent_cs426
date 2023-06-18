@@ -5,22 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".MainActivity">
 
-    <Button
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Set alarm"
-        android:id="@+id/button_set_alarm"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Send email"
-        android:id="@+id/button_send_email"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Play music/video"
-        android:id="@+id/button_play_music_video"/>
+        android:rowCount="3"
+        android:columnCount="1">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_set_alarm_name"
+            android:id="@+id/button_set_alarm" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_send_email_name"
+            android:id="@+id/button_send_email"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_play_media_name"
+            android:id="@+id/button_play_music_video"/>
+    </GridLayout>
 
 </LinearLayout>

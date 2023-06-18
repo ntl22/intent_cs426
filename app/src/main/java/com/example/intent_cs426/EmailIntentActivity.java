@@ -61,7 +61,7 @@ public class EmailIntentActivity extends AppCompatActivity {
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         } else {
-            Toast.makeText(this, "Email client not found:th", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Email client not found", Toast.LENGTH_SHORT).show();
         }
     }
 }

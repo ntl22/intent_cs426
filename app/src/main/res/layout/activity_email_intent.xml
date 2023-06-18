@@ -7,55 +7,64 @@
     android:orientation="vertical"
     tools:context=".EmailIntentActivity">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingVertical="10dp"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:fontFamily="sans-serif-black"
-        android:textSize="20sp"
-        android:text="Email Sender"
-        android:background="@color/black"/>
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/input_email_to"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="To"
-        android:inputType="textEmailAddress" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-black"
+                android:textSize="20sp"
+                android:text="@string/activity_send_email_name" />
 
-    <EditText
-        android:id="@+id/input_email_cc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="CC"
-        android:inputType="textEmailAddress"/>
+            <EditText
+                android:id="@+id/input_email_to"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_email_to"
+                android:inputType="textEmailAddress" />
 
-    <EditText
-        android:id="@+id/input_email_bcc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="BCC"
-        android:inputType="textEmailAddress"/>
+            <EditText
+                android:id="@+id/input_email_cc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_email_cc"
+                android:inputType="textEmailAddress"/>
 
-    <EditText
-        android:id="@+id/input_email_subject"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Subject"
-        android:inputType="textEmailSubject"/>
+            <EditText
+                android:id="@+id/input_email_bcc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_email_bcc"
+                android:inputType="textEmailAddress"/>
 
-    <EditText
-        android:id="@+id/input_email_body"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Body" />
+            <EditText
+                android:id="@+id/input_email_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_email_subject"
+                android:inputType="textEmailSubject"/>
 
-    <Button
-        android:id="@+id/button_call_email_intent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Send" />
+            <EditText
+                android:id="@+id/input_email_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_email_body" />
+
+            <Button
+                android:id="@+id/button_call_email_intent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_submit_email_name" />
+        </LinearLayout>
+    </ScrollView>
+
 
 </LinearLayout>

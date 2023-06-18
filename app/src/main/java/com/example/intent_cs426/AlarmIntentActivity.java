@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 public class AlarmIntentActivity extends AppCompatActivity {
 
@@ -28,7 +29,11 @@ public class AlarmIntentActivity extends AppCompatActivity {
                         .putExtra(AlarmClock.EXTRA_MESSAGE, alarmMessage.getText().toString())
                         .putExtra(AlarmClock.EXTRA_HOUR, timePicker.getHour())
                         .putExtra(AlarmClock.EXTRA_MINUTES, timePicker.getMinute());
-                startActivity(intent);
+                if (intent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(view.getContext(), "Application not found", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
