@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:hint="@string/phone_number"
+            android:autofillHints="phone"
+            android:id="@+id/phoneNumber"
+            android:inputType="phone"
+            android:layout_width="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/phoneBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phoneNumber"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/dialBtn" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:hint="@string/website_url"
+            android:autofillHints="phone"
+            android:id="@+id/urlTxt"
+            android:inputType="textUri"
+            android:layout_width="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/urlBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/urlTxt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Open website" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/cameraBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Open camera" />
+
+        <ImageView
+            android:id="@+id/cameraImg"
+            android:layout_margin="60dp"
+            android:layout_below="@+id/cameraBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+</LinearLayout>
